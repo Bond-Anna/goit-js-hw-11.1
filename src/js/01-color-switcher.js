@@ -1,4 +1,4 @@
-// import '../css/common.css';
+// import '../sass/main.scss';
 
 const bodyEl = document.querySelector('body');
 const startBtnEl = document.querySelector('button[data-start]');
