@@ -22,12 +22,9 @@ const users = [
 ];
 
 const toggleUserState = (allUsers, username, callback) => {
-  return new Promise(resolve => {
-    const updatedUsers = allUsers.map(user =>
-      user.name === username ? { ...user, active: !user.active } : user,
-    );
-    resolve(updatedUsers);
-  });
+  return Promise.resolve(
+    allUsers.map(user => (user.name === username ? { ...user, active: !user.active } : user)),
+  );
 };
 
 // Currently the function works like this
