@@ -18,7 +18,7 @@ function onInputChange() {
   selectedDate = inputEl.value;
   console.log(Date.parse(selectedDate));
   if (Date.parse(selectedDate) < Date.parse(todayDate)) {
-    Swal.fire('Please choose a date in the future');
+    Swal.fire('Please choose a date in the future ✨');
     clearInterval(intervalId);
     return startBtnEl.setAttribute('disabled', true);
   }
