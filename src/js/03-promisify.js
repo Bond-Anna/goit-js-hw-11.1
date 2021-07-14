@@ -52,9 +52,8 @@ const makeTransaction = (transaction, onSuccess, onError) => {
 
       if (canProcess) {
         resolve({ id: transaction.id, time: delay });
-      } else {
-        reject(transaction.id);
       }
+      reject(transaction.id);
     }, delay);
   });
 };
